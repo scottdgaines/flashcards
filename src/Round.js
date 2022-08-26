@@ -3,19 +3,33 @@ const Turn = require("./Turn")
 class Round {
     constructor(deck) {
         this.deck = deck,
-        this.currentCard = deck.cards[0],
-        this.turns = 0
+        this.turns = 0,
+        this.incorrectGuesses = []
     }
 
     returnCurrentCard = () => {
-        return this.currentCard
+        return this.deck.cards[this.turns]
     }
 
-    takeTurn = (currentCard, guess) => {
-        this.turns += 1
-        this.currentCard = deck.cards
-        let turn = new Turn(currentCard, guess)
-        return turn
+    takeTurn = (guess) => {
+        let currentTurn = new Turn(this.deck.cards[this.turns], guess)
+
+        if (!currentTurn.evaluateGuess()) {
+            this.incorrectGuesses.push(this.deck.cards[this.turns].id)
+        }
+       
+        this.turns++
+        this.returnCurrentCard()
+        return currentTurn.giveFeedback()
+    }
+
+    calculatePercentage = () => {
+        let percentage = this.incorrectGuesses.length / this.turns * 100
+        return percentage
+    }
+
+    endRound = () => {
+        return `**Round over!** You answered ${this.calculatePercentage()}% of the questions correctly!`
     }
 }
 
