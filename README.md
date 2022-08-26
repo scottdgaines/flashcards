@@ -22,6 +22,6 @@ I was able to complete the first two iterations in addition to using a trello bo
 
 In favor of submitting a refactored project, I did not attempt iteration 3, but plan on doing so in the future.
 
-My refactoring included streamlining all test documents by adding a beforeEach function to declare all necessary variables for the following tests to use. Additionally, I updated all cards variables to have a consistent theme (Batman!)
+My refactoring included streamlining all test documents by adding a beforeEach function to declare all necessary variables for the following tests to use. Additionally, I updated all card variables to have a consistent theme (Batman!).
 
-Because I did not complete iteration 3, I was not able to make a gif showing gameplay.
+Because I did not complete iteration 3, I did have a gif showing gameplay, but wanted to stay on theme. 
