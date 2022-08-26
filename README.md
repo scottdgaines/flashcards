@@ -4,9 +4,9 @@
 Flashcards is an app designed to allow users to review and answer various flashcards with realtime feedback and an end report of how many questions they answered correctly.
 
 ## Technologies
-Javascript
-Mocha
-Chai: expect
+- Javascript
+- Mocha
+- Chai: expect
 
 ## Setup and Installation
 1. Fork this repo
